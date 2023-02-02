@@ -9,7 +9,7 @@ on:
    inputs:
     enableManualDeployment:
       description: 'xyd'
-      default: false
+      default: true
       required: true
       type: boolean
     skipUnitTests :
