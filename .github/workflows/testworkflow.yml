@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v3
         
       - name: print var
-        if: ${{ github.event.inputs.skipUnitTests == 'false'}}
+        if: ${{ github.event.inputs.skipUnitTests == false}}
         run: echo "fsdfdsaf"
    
         
