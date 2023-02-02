@@ -26,8 +26,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - print var
-        run: echo github.event.inputs.skipUnitTests
+      - name: print var
+        run: echo "::set-output name=boolean_output::${{ toJSON($github.event.inputs.skipUnitTests) }}"
+   
         
-      - print var
-        run: echo ${{ github.event.inputs.skipUnitTests == 'false'}}        
+    
