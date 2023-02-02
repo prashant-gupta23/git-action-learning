@@ -29,6 +29,9 @@ jobs:
       - name: print var
         if: ${{ github.event.inputs.skipUnitTests == false}}
         run: echo "fsdfdsaf"
-   
         
+  
+      - name: print var
+        if: ${{ github.event.inputs.enableManualDeployment == true}}
+        run: echo "fsdfdsaf"        
     
