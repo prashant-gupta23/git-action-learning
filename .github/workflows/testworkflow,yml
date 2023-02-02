@@ -1,0 +1,33 @@
+
+name: testworkflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+   inputs:
+    enableManualDeployment:
+      description: 'xyd'
+      default: false
+      required: true
+      type: boolean
+    skipUnitTests :
+      description: 'xzydk'
+      default: false
+      required: true
+      type: boolean
+      
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - print var
+        run: echo github.event.inputs.skipUnitTests
+        
+      - print var
+        run: echo ${{ github.event.inputs.skipUnitTests == 'false'}}        
